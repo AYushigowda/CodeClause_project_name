@@ -1,6 +1,6 @@
 #Importing the necessary modules
 from tkinter import *
-import parser
+
 from math import factorial
 
 
@@ -19,7 +19,7 @@ def get_variables(num):
 def calculate():
     entire_string = display.get()
     try:
-        a = parser.expr(entire_string).compile()
+        a = parsers.expr(entire_string).compile()
         result = eval(a)
         clear_all()
         display.insert(0,result)
@@ -106,3 +106,9 @@ Button(root,text="=",command= lambda :calculate()).grid(columnspan=6, sticky=N+S
 
  
 root.mainloop()
+
+
+
+
+
+ 
